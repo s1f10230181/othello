@@ -1,6 +1,6 @@
 import { useState } from 'react';
+import { Cell } from '../components/Cell';
 import styles from './index.module.css';
-import { Cell } from '../components/Cell'
 
 const Home = () => {
   // prettier-ignore
@@ -97,7 +97,7 @@ const Home = () => {
       <div className={styles.board}>
         {board.map((row, y) =>
           row.map((cell, x) => (
-            <Cell key={`${x}-${y}`} x ={x} y={y} cell={cell} onClick={() => onClick(x,y)} />
+            <Cell key={`${x}-${y}`} x={x} y={y} cell={cell} onClick={() => onClick(x, y)} />
           ))
         )}
       </div>

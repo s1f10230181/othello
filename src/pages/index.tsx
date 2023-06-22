@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import styles from './index.module.css';
+import { Cell } from '../components/Cell'
 
 const Home = () => {
   // prettier-ignore
@@ -62,7 +63,7 @@ const Home = () => {
     );
   };
 
-  const clickcell = (x: number, y: number) => {
+  const onClick = (x: number, y: number) => {
     console.log(x, y);
     if (newBoard[y][x] === 3) {
       for (const d of direction) {
@@ -96,14 +97,7 @@ const Home = () => {
       <div className={styles.board}>
         {board.map((row, y) =>
           row.map((cell, x) => (
-            <div className={styles.cell} key={`${x}-${y}`} onClick={() => clickcell(x, y)}>
-              {cell !== 0 && (
-                <div
-                  className={styles.disc}
-                  style={{ background: cell === 2 ? '#000' : cell === 1 ? '#fff' : '#ff9d00' }}
-                />
-              )}
-            </div>
+            <Cell key={`${x}-${y}`} x ={x} y={y} cell={cell} onClick={() => onClick(x,y)} />
           ))
         )}
       </div>

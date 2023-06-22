@@ -1,0 +1,15 @@
+.disc {
+  border-radius: 35px;
+  height: 70px;
+  width: 70px;
+  background-color: white;
+}
+
+.cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 1px black;
+  width: 80px;
+  height: 80px;
+}

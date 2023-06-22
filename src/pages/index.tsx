@@ -1,9 +1,9 @@
 import { Cell } from '../components/Cell';
-import { useGame } from '../hooks/useGames';
+import { useGame } from '../hooks/useGame';
 import styles from './index.module.css';
 
 const Home = () => {
-  const { board, row, y, cell, x, turnColor, onClick } = useGame();
+  const { board, turnColor, onClick } = useGame();
 
   return (
     <div className={styles.container}>

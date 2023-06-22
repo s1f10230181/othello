@@ -89,4 +89,5 @@ export const useGame = () => {
       setBoard(newBoard);
     }
   };
+  return {board, turnColor, onClick}
 };
